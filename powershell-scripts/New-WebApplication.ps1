@@ -6,7 +6,7 @@
 
 echo on
 
-$HostHeader = Read-Host("Enter host header(IIS Server Name Indication). Should be left blank for the App Domain Web App")
+$HostHeader = Read-Host("HostHeader(IIS Server Name Indication)[Optional]: Should be left blank for the App Domain Web App")
 
 $trimmedName = $Name.Replace(" ","_").Replace("-", "_")
 $AppPool = "WebAppl_" + $trimmedName
