@@ -14,5 +14,3 @@ if($Template.Length -eq 0) {
 }
 
 New-SPSite -Url $Url -OwnerAlias $OwnerAlias -Template $Template
-
-dfdsf
