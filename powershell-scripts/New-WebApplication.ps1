@@ -1,7 +1,8 @@
 ﻿param(
     [Parameter(Mandatory=$true, HelpMessage="IIS Name & Central Admin Display Name")][String] $Name,
     [Parameter(Mandatory=$true, HelpMessage="url including https:// protocol")][String] $Url,
-    [Parameter(Mandatory=$true, HelpMessage="domain\account")][String] $account
+    [Parameter(Mandatory=$true, HelpMessage="domain\account")][String] $account,
+    [Parameter(Mandatory=$true, HelpMessage="domain\account")][String] $account2
 ) 
 
 echo on
