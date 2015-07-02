@@ -15,18 +15,8 @@ $DB = "WebApp_" + $trimmedName + "_DB"
 $ap = New-SPAuthenticationProvider
 
 if($hostheaders.Length -ne 0) {
-    New-SPWebApplication -Name $Name -URL $Url -Port 443 `
-    -ApplicationPool $AppPool ` 
-    -ApplicationPoolAccount (Get-SPManagedAccount $account) `
-    -AuthenticationProvider $ap -SecureSocketsLayer `
-    -DatabaseName $DB `
-    -HostHeader $HostHeader
-
+    New-SPWebApplication -Name $Name -URL $Url -Port 443 -ApplicationPool $AppPool -ApplicationPoolAccount (Get-SPManagedAccount $account) -AuthenticationProvider $ap -SecureSocketsLayer -DatabaseName $DB -HostHeader $HostHeader
 } else {
-    New-SPWebApplication -Name $Name -URL $Url -Port 443 `
-    -ApplicationPool $AppPool ` 
-    -ApplicationPoolAccount (Get-SPManagedAccount $account) `
-    -AuthenticationProvider $ap -SecureSocketsLayer `
-    -DatabaseName $DB
+    New-SPWebApplication -Name $Name -URL $Url -Port 443 -ApplicationPool $AppPool -ApplicationPoolAccount (Get-SPManagedAccount $account) -AuthenticationProvider $ap -SecureSocketsLayer -DatabaseName $DB
 }
 
