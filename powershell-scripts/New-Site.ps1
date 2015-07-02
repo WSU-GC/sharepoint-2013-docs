@@ -1,7 +1,7 @@
 ﻿param(
     [Parameter(Mandatory=$true, HelpMessage="url of the desired site collection")][String] $Url,
     [Parameter(Mandatory=$true, HelpMessage="domain\account the site collection owner")][String] $OwnerAlias
-) 
+)
 
 echo on
 
@@ -14,3 +14,5 @@ if($Template.Length -eq 0) {
 }
 
 New-SPSite -Url $Url -OwnerAlias $OwnerAlias -Template $Template
+
+dfdsf
