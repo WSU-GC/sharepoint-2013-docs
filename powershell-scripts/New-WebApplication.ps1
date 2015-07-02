@@ -9,8 +9,8 @@ echo on
 $HostHeader = Read-Host("HostHeader(IIS Server Name Indication)[Optional]: Should be left blank for the App Domain Web App")
 
 $trimmedName = $Name.Replace(" ","_").Replace("-", "_")
-$AppPool = "WebAppl_" + $trimmedName
-$DB = "WebApp_" + $trimmedName
+$AppPool = "WebApp_" + $trimmedName + "_AppPool"
+$DB = "WebApp_" + $trimmedName + "_DB"
 
 $ap = New-SPAuthenticationProvider
 
